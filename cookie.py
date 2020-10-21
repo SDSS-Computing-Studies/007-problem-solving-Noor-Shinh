@@ -27,7 +27,7 @@ while C==True:
         d=p.locateCenterOnScreen("Cursor.PNG", confidence=0.8)
         p.click(d)
 
-        times=curTime + 60
+        times=curTime + 300
     if curTime>upgrade:
         p.click(1153,220)  
         upgrade=curTime + 239  
