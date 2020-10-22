@@ -34,6 +34,6 @@ your screen
 """
 
 import pyautogui as p 
+import time as t 
 
 p.mouseInfo()
-p.moveTo(226,325)

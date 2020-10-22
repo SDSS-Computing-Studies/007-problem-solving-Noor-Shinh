@@ -2,16 +2,20 @@ import pyautogui as p
 import time
 times=[]
 upgrade=[]
+golden=[]
 curTime=time.time()
 C=True
 times=curTime + 5
 upgrade=curTime + 4
+golden=curTime + 3
 
 while C==True:
     p.click(218,398)
     
     curTime=time.time()
     if curTime>times:
+        n=p.locateCenterOnScreen("Wizard.PNG", confidence=0.8)
+        p.click(n)
         x=p.locateCenterOnScreen("Temple.PNG", confidence=0.8)
         p.click(x)
         y=p.locateCenterOnScreen("Bank.PNG", confidence=0.8)
@@ -27,10 +31,18 @@ while C==True:
         d=p.locateCenterOnScreen("Cursor.PNG", confidence=0.8)
         p.click(d)
 
-        times=curTime + 60
+        times=curTime + 300
     if curTime>upgrade:
-        p.click(1153,220)  
-        upgrade=curTime + 239  
- 
+        z=p.locateCenterOnScreen("Store.PNG", confidence=0.8)
+        p.moveTo(z)
+        p.move(-100,70)
+        p.click()
+        upgrade=curTime + 280 
+     
+    if curTime>golden:
+        m=p.locateCenterOnScreen("Gold.PNG", confidence=0.8)
+        p.click(m)
+        print("x")
+        golden = curTime+5
     
 
